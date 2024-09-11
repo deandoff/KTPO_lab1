@@ -1,0 +1,12 @@
+/Users/islamahmetgaleev/RiderProjects/KTPO4317.Akhmetgaleev/KTPO4317.Akhmetgaleev.Lib/bin/Debug/net6.0/KTPO4317.Akhmetgaleev.Lib.deps.json
+/Users/islamahmetgaleev/RiderProjects/KTPO4317.Akhmetgaleev/KTPO4317.Akhmetgaleev.Lib/bin/Debug/net6.0/KTPO4317.Akhmetgaleev.Lib.dll
+/Users/islamahmetgaleev/RiderProjects/KTPO4317.Akhmetgaleev/KTPO4317.Akhmetgaleev.Lib/bin/Debug/net6.0/KTPO4317.Akhmetgaleev.Lib.pdb
+/Users/islamahmetgaleev/RiderProjects/KTPO4317.Akhmetgaleev/KTPO4317.Akhmetgaleev.Lib/obj/Debug/net6.0/KTPO4317.Akhmetgaleev.Lib.csproj.AssemblyReference.cache
+/Users/islamahmetgaleev/RiderProjects/KTPO4317.Akhmetgaleev/KTPO4317.Akhmetgaleev.Lib/obj/Debug/net6.0/KTPO4317.Akhmetgaleev.Lib.GeneratedMSBuildEditorConfig.editorconfig
+/Users/islamahmetgaleev/RiderProjects/KTPO4317.Akhmetgaleev/KTPO4317.Akhmetgaleev.Lib/obj/Debug/net6.0/KTPO4317.Akhmetgaleev.Lib.AssemblyInfoInputs.cache
+/Users/islamahmetgaleev/RiderProjects/KTPO4317.Akhmetgaleev/KTPO4317.Akhmetgaleev.Lib/obj/Debug/net6.0/KTPO4317.Akhmetgaleev.Lib.AssemblyInfo.cs
+/Users/islamahmetgaleev/RiderProjects/KTPO4317.Akhmetgaleev/KTPO4317.Akhmetgaleev.Lib/obj/Debug/net6.0/KTPO4317.Akhmetgaleev.Lib.csproj.CoreCompileInputs.cache
+/Users/islamahmetgaleev/RiderProjects/KTPO4317.Akhmetgaleev/KTPO4317.Akhmetgaleev.Lib/obj/Debug/net6.0/KTPO4317.Akhmetgaleev.Lib.dll
+/Users/islamahmetgaleev/RiderProjects/KTPO4317.Akhmetgaleev/KTPO4317.Akhmetgaleev.Lib/obj/Debug/net6.0/refint/KTPO4317.Akhmetgaleev.Lib.dll
+/Users/islamahmetgaleev/RiderProjects/KTPO4317.Akhmetgaleev/KTPO4317.Akhmetgaleev.Lib/obj/Debug/net6.0/KTPO4317.Akhmetgaleev.Lib.pdb
+/Users/islamahmetgaleev/RiderProjects/KTPO4317.Akhmetgaleev/KTPO4317.Akhmetgaleev.Lib/obj/Debug/net6.0/ref/KTPO4317.Akhmetgaleev.Lib.dll
