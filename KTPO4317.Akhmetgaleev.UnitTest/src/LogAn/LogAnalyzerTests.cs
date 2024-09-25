@@ -2,70 +2,62 @@ using NUnit.Framework;
 using KTPO4317.Akhmetgaleev.Lib.LogAn;
 using NUnit.Framework.Legacy;
 
-namespace KTPO4317.Akhmetgaleev.UnitTest.LogAn;
-
-[TestFixture]
-public class LogAnalyzerTests
+namespace KTPO4317.Akhmetgaleev.UnitTest.LogAn
 {
-    [Test]
-    public void IsValidFileName_BadExtension_ReturnsFalse()
+    [TestFixture]
+    public class LogAnalyzerTests
     {
-        LogAnalyzer analyzer = new LogAnalyzer();
-        
-        bool result = analyzer.IsValidLogFileName("filewithbadextension.foo");
-        
-        Assert.That(result, Is.False);
-    }   
+        [Test]
+        public void IsValidFileName_NameSupportedExtension_True()
+        {
+            FakeExtensionManager fakeExtensionManager = new FakeExtensionManager();
+            fakeExtensionManager.WillBeValid = true;
+            
+            LogAnalyzer logAnalyzer = new LogAnalyzer(fakeExtensionManager);
+
+            bool result = logAnalyzer.IsValidLogFileName("short.ext");
+            
+            ClassicAssert.True(result);
+        }
+
+        [Test]
+        public void IsValidFileName_NameUnsupportedExtension_False()
+        {
+            FakeExtensionManager fakeExtensionManager = new FakeExtensionManager();
+            fakeExtensionManager.WillBeValid = false;
+
+            LogAnalyzer logAnalyzer = new LogAnalyzer(fakeExtensionManager);
+
+            bool result = logAnalyzer.IsValidLogFileName("unsupported.txt");
+
+            ClassicAssert.False(result);
+        }
+        [Test]
+        public void IsValidFileName_ExtensionManagerThrowsException_ReturnsFalse()
+        {
+            FakeExtensionManager fakeExtensionManager = new FakeExtensionManager();
+            fakeExtensionManager.WillThrow = new Exception("Exception");
+
+            LogAnalyzer logAnalyzer = new LogAnalyzer(fakeExtensionManager);
+            
+            bool result = logAnalyzer.IsValidLogFileName("file.ext");
+            ClassicAssert.False(result);
+        }
+    }
     
-    [Test]
-    public void IsValidLogFileName_GoodExtensionUppercase_ReturnsTrue()
+    internal class FakeExtensionManager : IExtensionManager
     {
-        LogAnalyzer analyzer = new LogAnalyzer();
-        
-        bool result = analyzer.IsValidLogFileName("filewithgoodextension.AIA");
-        
-        Assert.That(result, Is.True);
-    }
-    
-    [Test]
-    public void IsValidLogFileName_GoodExtensionLowercase_ReturnsTrue()
-    {
-        LogAnalyzer analyzer = new LogAnalyzer();
-        
-        bool result = analyzer.IsValidLogFileName("filewithgoodextension.aia");
-        
-        Assert.That(result, Is.True);
-    }
+        public bool WillBeValid = false;
 
-    [TestCase("filewithgoodextension.aia")]
-    [TestCase("filewithgoodextension.AIA")]
-    public void IsValidLogFileName_ValidExtension_ReturnsTrue(string filename)
-    {
-        LogAnalyzer analyzer = new LogAnalyzer();
-        
-        bool result = analyzer.IsValidLogFileName(filename);
-        
-        Assert.That(result, Is.True);
-    }
+        public Exception WillThrow = null;
 
-    [Test]
-    public void IsValidLogFileName_EmptyFileName_ReturnsFalse()
-    {
-        LogAnalyzer analyzer = new LogAnalyzer();
-        
-        var exeption = Assert.Throws<ArgumentException>(() => analyzer.IsValidLogFileName(string.Empty));
-        
-        StringAssert.StartsWith(exeption.Message, "No file name provided");
-    }
-
-    [TestCase("badfile.foo", false)]
-    [TestCase("goodfile.aia", true)]
-    public void IsValidLogFileName_WhenCalled_ChangesWasLastFileNameValid(string filename, bool expected)
-    {
-        LogAnalyzer analyzer = new LogAnalyzer();
-        
-        analyzer.IsValidLogFileName(filename);
-        
-        ClassicAssert.AreEqual(expected, analyzer.WasLastFileNameValid);
+        public bool IsValid(string fileName)
+        {
+            if (WillThrow != null)
+            {
+                throw WillThrow;
+            }
+            return WillBeValid;
+        }
     }
 }

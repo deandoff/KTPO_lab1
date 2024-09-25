@@ -1,15 +1,25 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace KTPO4317.Akhmetgaleev.Lib.LogAn;
 
 public class LogAnalyzer
 {
-    public bool WasLastFileNameValid { get; set; }
+    public LogAnalyzer(IExtensionManager extensionManager)
+    {
+        ExtensionManager = extensionManager;
+    }
+
+    private IExtensionManager ExtensionManager { get; set; }
+    
     public bool IsValidLogFileName(string fileName)
     {
-        if (string.IsNullOrEmpty(fileName))
+        try
         {
-            throw new ArgumentException("No file name provided");
+            return ExtensionManager.IsValid(fileName);
         }
-        WasLastFileNameValid = fileName.EndsWith(".AIA", StringComparison.CurrentCultureIgnoreCase);
-        return WasLastFileNameValid;
+        catch (Exception)
+        {
+            return false;
+        }
     }
 }
