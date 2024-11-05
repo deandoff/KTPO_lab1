@@ -9,16 +9,16 @@ namespace KTPO4317.Akhmetgaleev.UnitTest.LogAn
     {
         [Test]
         public void IsValidFileName_NameSupportedExtension_True()
-        {
+        { 
             FakeExtensionManager fakeExtensionManager = new FakeExtensionManager();
             fakeExtensionManager.WillBeValid = true;
-
+         
             ExtensionManagerFactory.SetManager(fakeExtensionManager);
-
+         
             LogAnalyzer logAnalyzer = new LogAnalyzer();
-
+         
             bool result = logAnalyzer.IsValidLogFileName("short.ext");
-
+         
             ClassicAssert.True(result);
         }
 

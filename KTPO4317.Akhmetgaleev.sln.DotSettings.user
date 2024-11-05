@@ -1,4 +1,12 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=17843bf2_002D8a82_002D43be_002Dba03_002Dc9fdfea119c3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="LogAnalyzerTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::33C264A9-463C-4D80-92A4-C276F480771C::net6.0::KTPO4317.Akhmetgaleev.UnitTest.LogAn.LogAnalyzerTests&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::33C264A9-463C-4D80-92A4-C276F480771C::net6.0::KTPO4317.Akhmetgaleev.UnitTest.Sample.SampleNSubstituteTests&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::33C264A9-463C-4D80-92A4-C276F480771C::net6.0::KTPO4317.Akhmetgaleev.UnitTest.LogAn.LogAnalyzerNSubstituteTests.IsValidFileName_NameSupportedExtension_ReturnsTrue&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::33C264A9-463C-4D80-92A4-C276F480771C::net6.0::KTPO4317.Akhmetgaleev.UnitTest.LogAn.LogAnalyzerNSubstituteTests&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=465284d9_002D33c3_002D4df1_002Dbf2b_002Dae7dcfe6343a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Analyze_WebServiceThrows_SendsEmail" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;Project Location="/Users/islamahmetgaleev/RiderProjects/KTPO4317.Akhmetgaleev/KTPO4317.Akhmetgaleev.UnitTest" Presentation="&amp;lt;KTPO4317.Akhmetgaleev.UnitTest&amp;gt;" /&gt;
 &lt;/SessionState&gt;</s:String>
