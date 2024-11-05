@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KTPO4317.Akhmetgaleev.UnitT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KTPO4317.Akhmetgaleev.Lib", "KTPO4317.Akhmetgaleev.Lib\KTPO4317.Akhmetgaleev.Lib.csproj", "{E1958D7F-0FD9-4EDD-B1B0-D92D41746F07}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KTPO4317.Akhmetgaleev.Service", "KTPO4317.Akhmetgaleev.Service\KTPO4317.Akhmetgaleev.Service.csproj", "{D2E97E3B-136D-4102-AE84-A501B54E8110}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{E1958D7F-0FD9-4EDD-B1B0-D92D41746F07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1958D7F-0FD9-4EDD-B1B0-D92D41746F07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1958D7F-0FD9-4EDD-B1B0-D92D41746F07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2E97E3B-136D-4102-AE84-A501B54E8110}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2E97E3B-136D-4102-AE84-A501B54E8110}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2E97E3B-136D-4102-AE84-A501B54E8110}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2E97E3B-136D-4102-AE84-A501B54E8110}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

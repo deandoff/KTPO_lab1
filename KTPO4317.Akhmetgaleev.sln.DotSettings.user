@@ -1,4 +1,7 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=465284d9_002D33c3_002D4df1_002Dbf2b_002Dae7dcfe6343a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Analyze_WebServiceThrows_SendsEmail" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Project Location="/Users/islamahmetgaleev/RiderProjects/KTPO4317.Akhmetgaleev/KTPO4317.Akhmetgaleev.UnitTest" Presentation="&amp;lt;KTPO4317.Akhmetgaleev.UnitTest&amp;gt;" /&gt;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=54d194ee_002D520f_002D4086_002D8e75_002D1fd31b396f42/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="IsValidFileName_BadExtension_ReturnsFalse" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;Or&gt;
     &lt;ProjectFile&gt;33C264A9-463C-4D80-92A4-C276F480771C/d:src/d:Sample/f:SampleTests.cs&lt;/ProjectFile&gt;
@@ -6,15 +9,15 @@
       &lt;TestId&gt;NUnit3x::33C264A9-463C-4D80-92A4-C276F480771C::net6.0::KTPO4317.Akhmetgaleev.UnitTest.LogAn.LogAnalyzerTests.IsValidFileName_NameSupportedExtension_True&lt;/TestId&gt;
       &lt;TestId&gt;NUnit3x::33C264A9-463C-4D80-92A4-C276F480771C::net6.0::KTPO4317.Akhmetgaleev.UnitTest.LogAn.LogAnalyzerTests.IsValidFileName_NameUnsupportedExtension_False&lt;/TestId&gt;
       &lt;TestId&gt;NUnit3x::33C264A9-463C-4D80-92A4-C276F480771C::net6.0::KTPO4317.Akhmetgaleev.UnitTest.LogAn.LogAnalyzerTests.IsValidFileName_ExtensionManagerThrowsException_ReturnsFalse&lt;/TestId&gt;
+      &lt;TestId&gt;NUnit3x::33C264A9-463C-4D80-92A4-C276F480771C::net6.0::KTPO4317.Akhmetgaleev.UnitTest.LogAn.LogAnalyzerTests.Analyze_FileNameTooShort_CallsWebService&lt;/TestId&gt;
     &lt;/TestAncestor&gt;
   &lt;/Or&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=58076bc9_002D14bc_002D4a84_002Da30e_002D7c2e6bd3efc2/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;TestAncestor&gt;
-    &lt;TestId&gt;NUnit3x::33C264A9-463C-4D80-92A4-C276F480771C::net6.0::KTPO4317.Akhmetgaleev.UnitTest.LogAn.LogAnalyzerTests.IsValidFileName_BadExtension_ReturnsFalse&lt;/TestId&gt;
-  &lt;/TestAncestor&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=569d44a0_002Dede5_002D4328_002D864c_002D987ca9daa439/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="LogAnalyzerTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Solution /&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=729ca674_002D362c_002D471a_002D8521_002D0a06bf848d8f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="SampleTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=729ca674_002D362c_002D471a_002D8521_002D0a06bf848d8f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="SampleTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;NUnit3x::33C264A9-463C-4D80-92A4-C276F480771C::net6.0::KTPO4317.Akhmetgaleev.UnitTest.Sample.SampleTests&lt;/TestId&gt;
     &lt;TestId&gt;NUnit3x::33C264A9-463C-4D80-92A4-C276F480771C::net6.0::KTPO4317.Akhmetgaleev.UnitTest.LogAn.LogAnalyzerTests.IsValidFileName_BadExtension_ReturnsFalse&lt;/TestId&gt;
