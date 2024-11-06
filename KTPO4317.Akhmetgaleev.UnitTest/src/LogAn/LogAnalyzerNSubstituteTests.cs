@@ -10,6 +10,7 @@ namespace KTPO4317.Akhmetgaleev.UnitTest.LogAn
         private IExtensionManager _fakeExtensionManager;
         private IWebService _mockWebService;
         private IEmailService _mockEmailService;
+        private LogAnalyzer _logAnalyzer;
 
         [SetUp]
         public void SetUp()
@@ -17,6 +18,7 @@ namespace KTPO4317.Akhmetgaleev.UnitTest.LogAn
             _fakeExtensionManager = Substitute.For<IExtensionManager>();
             _mockWebService = Substitute.For<IWebService>();
             _mockEmailService = Substitute.For<IEmailService>();
+            _logAnalyzer = new LogAnalyzer();
 
             ExtensionManagerFactory.SetManager(_fakeExtensionManager);
             WebServiceFactory.SetService(_mockWebService);
@@ -34,9 +36,8 @@ namespace KTPO4317.Akhmetgaleev.UnitTest.LogAn
         [Test]
         public void IsValidFileName_NameSupportedExtension_ReturnsTrue()
         {
-            _fakeExtensionManager.IsValid(Arg.Any<string>()).Returns(true);
-            LogAnalyzer logAnalyzer = new LogAnalyzer();
-            bool result = logAnalyzer.IsValidLogFileName("validFile.log");
+            _fakeExtensionManager.IsValid(Arg.Any<String>()).Returns(true);
+            bool result = _logAnalyzer.IsValidLogFileName("validFile.log");
             Assert.That(result, Is.True);
         }
 
@@ -44,8 +45,7 @@ namespace KTPO4317.Akhmetgaleev.UnitTest.LogAn
         public void IsValidFileName_NameUnsupportedExtension_ReturnsFalse()
         {
             _fakeExtensionManager.IsValid(Arg.Any<string>()).Returns(false);
-            LogAnalyzer logAnalyzer = new LogAnalyzer();
-            bool result = logAnalyzer.IsValidLogFileName("unsupported.txt");
+            bool result = _logAnalyzer.IsValidLogFileName("unsupported.txt");
             Assert.That(result, Is.False);
         }
 
@@ -55,8 +55,7 @@ namespace KTPO4317.Akhmetgaleev.UnitTest.LogAn
             _fakeExtensionManager
                 .When(x => x.IsValid(Arg.Any<string>()))
                 .Do(x => { throw new Exception("Exception"); });
-            LogAnalyzer logAnalyzer = new LogAnalyzer();
-            bool result = logAnalyzer.IsValidLogFileName("file.ext");
+            bool result = _logAnalyzer.IsValidLogFileName("file.ext");
             Assert.That(result, Is.False);
         }
 
@@ -77,11 +76,10 @@ namespace KTPO4317.Akhmetgaleev.UnitTest.LogAn
         {
             _mockWebService.When(x => x.LogError(Arg.Any<string>()))
                 .Do(x => { throw new Exception("Это подделка"); });
-
-            LogAnalyzer logAnalyzer = new LogAnalyzer();
+            
             string tooShortFileName = "abc.txt";
 
-            logAnalyzer.Analyze(tooShortFileName);
+            _logAnalyzer.Analyze(tooShortFileName);
             
             _mockEmailService.Received().SendEmail(
                 Arg.Is<string>(s => s == "admin@example.com"),
