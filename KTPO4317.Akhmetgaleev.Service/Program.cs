@@ -1,4 +1,6 @@
-﻿using KTPO4317.Akhmetgaleev.Lib.LogAn;
+﻿using KTPO4317.Akhmetgaleev.Lib.Common;
+using KTPO4317.Akhmetgaleev.Lib.SampleCommands;
+using KTPO4317.Akhmetgaleev.Service.WindsorInstallers;
 
 namespace KTPO4317.Akhmetgaleev.Service
 {
@@ -6,14 +8,14 @@ namespace KTPO4317.Akhmetgaleev.Service
     {
         static void Main()
         {
-            LogAnalyzer logAnalyzer = new LogAnalyzer();
+            CastleFactory.Container?.Install(
+                new SampleCommandInstaller(),
+                new ViewInstaller());
 
-            string[] fileNames = { "file1.log", "file2.txt", "file3.log", "file4.doc" };
-
-            foreach (var fileName in fileNames)
+            for (int i = 0; i < 3; i++)
             {
-                bool isValid = logAnalyzer.IsValidLogFileName(fileName);
-                Console.WriteLine($"File: {fileName}, Valid: {isValid}");
+                ISampleCommand sampleCommand = CastleFactory.Container?.Resolve<ISampleCommand>()!;
+                sampleCommand.Execute();
             }
         }
     }
