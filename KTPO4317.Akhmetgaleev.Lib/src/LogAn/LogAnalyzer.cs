@@ -1,7 +1,9 @@
 namespace KTPO4317.Akhmetgaleev.Lib.LogAn;
 
-public class LogAnalyzer
+public class LogAnalyzer : ILogAnalyzer
 {
+    public event LogAnalyzerAction? Analyzed;
+    
     public bool IsValidLogFileName(string fileName)
     {
         try
@@ -30,5 +32,12 @@ public class LogAnalyzer
                 emailService.SendEmail("admin@example.com", "Невозможно вызвать веб-сервис", e.Message);
             } 
         }
+
+        RaiseAnalyzedEvent();
+    }
+    
+    protected void RaiseAnalyzedEvent()
+    {
+        Analyzed?.Invoke();
     }
 }

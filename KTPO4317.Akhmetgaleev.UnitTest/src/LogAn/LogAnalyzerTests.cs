@@ -86,6 +86,18 @@ namespace KTPO4317.Akhmetgaleev.UnitTest.LogAn
                 StringAssert.Contains("Невозможно вызвать веб-сервис", mockEmailService.Subject);
         }
 
+        [Test]
+        public void Analyze_WhenAnalyzed_FiredEvent()
+        {
+            var analyzer = new LogAnalyzer();
+            bool eventFired = false;
+            analyzer.Analyzed += () => eventFired = true;
+            
+            analyzer.Analyze("validLogFile.txt");
+            
+            Assert.That(eventFired, Is.True);
+        }
+
         [TearDown]
         public void TearDown()
         {

@@ -38,4 +38,7 @@
     &lt;TestId&gt;NUnit3x::33C264A9-463C-4D80-92A4-C276F480771C::net6.0::KTPO4317.Akhmetgaleev.UnitTest.LogAn.LogAnalyzerTests.IsValidLogFileName_WhenCalled_ChangesWasLastFileNameValid&lt;/TestId&gt;
     &lt;TestId&gt;NUnit3x::33C264A9-463C-4D80-92A4-C276F480771C::net6.0::KTPO4317.Akhmetgaleev.UnitTest.LogAn.LogAnalyzerTests&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c6491417_002D5087_002D4b7f_002D9543_002D479ade65e6bd/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Solution /&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
